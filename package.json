@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "bip39": "^3.0.4",
+    "cron": "^2.2.0",
+    "eth-hd-wallet": "^0.5.1",
+    "ethers": "^5.7.2",
+    "package.json": "^2.0.1",
+    "web3": "^1.8.1"
+  },
+  "name": "addresscleanerbot",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeWithJoe2020/AddressCleanerBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeWithJoe2020/AddressCleanerBot/issues"
+  },
+  "homepage": "https://github.com/CodeWithJoe2020/AddressCleanerBot#readme",
+  "description": ""
+}

